@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정책 테이블 내용 추가</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #3498db;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+            text-align: left;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+
+        }
+
+        input[type="submit"] {
+            background-color: #3498db;
+            color: #fff;
+            padding: 12px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+
+        #content {
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="./policy.php" method="post">
+        <h1>정책 테이블 내용 추가</h1>
+        <!-- 비밀번호 입력 필드 -->
+        <label for="password">password</label>
+        <input type="text" name="password" id="password" required>
+        <!-- 기관이름 입력 필드 -->
+        <label for="engine">기관이름</label>
+        <input type="text" name="engine" id="engine" required>
+
+        <!-- 제목 입력 필드 -->
+        <label for="title">정책이름</label>
+        <input type="text" name="title" id="title" required>
+
+        <!-- 내용 입력 필드 -->
+        <label for="content">정책내용</label>
+        <textarea name="content" id="content" required></textarea>
+        <!-- 제목 입력 필드 -->
+        <label for="object">지원대상</label>
+        <input type="text" name="object" id="object" required>
+
+        <!-- 제목 입력 필드 -->
+        <label for="application">신청방법</label>
+        <input type="text" name="application" id="application" required>
+
+        <label for="link">링크</label>
+        <input type="text" name="link" id="link" required>
+
+        <!-- 마감날짜 입력 필드 -->
+        <label for="deadline">마감날짜</label>
+        <input type="date" name="deadline" id="deadline" required>
+
+        <label for="key">키워드</label>
+        <select id="key" name="key" title="키워드 리스트" required>
+            <option value="" selected>선택해주세요</option>
+            <option value="서비스">서비스</option>
+            <option value="시설이용">시설이용</option>
+            <option value="이용권">이용권</option>
+            <option value="현금">현금</option>
+            <option value="기타">기타</option>
+        </select>
+
+        <label for="imglink">이미지링크</label>
+        <input type="text" name="imglink" id="imglink" required>
+
+        <!-- 폼 제출 버튼 -->
+        <input type="submit" value="데이터 저장">
+
+        <!-- 홈으로 가는 버튼 -->
+        <a href="../policymain.html" style="text-decoration: none;">완료</a>
+
+    </form>
+
+</body>
+
+</html>
