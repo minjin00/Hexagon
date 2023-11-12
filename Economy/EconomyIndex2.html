@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>적금 테이블 내용 추가</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #3498db;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+            text-align: left;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+
+        }
+
+        input[type="submit"] {
+            background-color: #3498db;
+            color: #fff;
+            padding: 12px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+
+        #content {
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="./Economy2.php" method="post">
+        <h1>적금 테이블 내용 추가</h1>
+        
+        <!-- 비밀번호 입력 필드 -->
+        <label for="password">password</label>
+        <input type="password" name="password" id="password" required>
+
+        <!-- 제목 입력 필드 -->
+        <label for="title">제목</label>
+        <input type="text" name="title" id="title" required>
+
+        <!-- 은행이름 입력 필드 -->
+        <label for="bank">은행</label>
+        <input type="text" name="bank" id="bank" required>
+
+        <!-- 내용 입력 필드 -->
+        <label for="content">내용</label>
+        <textarea name="content" id="content" required></textarea>
+
+        <!-- 마감날짜 입력 필드 -->
+        <label for="deadline">마감날짜</label>
+        <input type="date" name="deadline" id="deadline" required>
+
+        <!-- 링크 입력 필드 -->
+        <label for="link">링크</label>
+        <input type="text" name="link" id="link" required>
+
+        <!-- 이율 입력 필드 -->
+        <label for="benefit">이율</label>
+        <input type="text" name="benefit" id="benefit" required>
+
+        <!-- 폼 제출 버튼 -->
+        <input type="submit" value="데이터 저장">
+
+        <!-- 홈으로 가는 버튼 -->
+        <a href="./juk.php" style="text-decoration: none;">완료</a>
+
+    </form>
+
+</body>
+
+</html>
